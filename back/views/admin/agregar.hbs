@@ -1,0 +1,42 @@
+<link rel='stylesheet' href='/stylesheets/agregar.css' />
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="login-box">
+    <h2 class="login-title">Agregar Animal</h2>
+
+    <form action="/admin/adopcion/agregar" method="post" enctype="multipart/form-data">
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text"><i class="fa-solid fa-paw"></i></span>
+          <input type="text" class="form-control" id="inputUser" placeholder="Nombre" name="nombre">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-info-circle"></i></span>
+          <textarea type="text" class="form-control" id="inputPassword" placeholder="Descripcion"
+            name="descripcion"></textarea>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-bold">IMAGEN</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-image"></i></span>
+          <input type="file" class="form-control" id="imagen" name="img" />
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary w-100">Agregar</button>
+    </form>
+
+    <div class="error">
+      {{#if error}}
+      <p class="bi bi-x-circle" aria-hidden="true"> {{message}}</p>
+      {{/if}}
+    </div>
+  </div>
+</div>

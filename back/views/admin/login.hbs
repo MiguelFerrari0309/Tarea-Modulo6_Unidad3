@@ -1,0 +1,29 @@
+<link rel='stylesheet' href='/stylesheets/login.css' />
+
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="login-box">
+    <h2 class="login-title">Iniciar sesión</h2>
+    <form action="/admin/login" method="post">
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+          <input type="text" class="form-control" id="inputUser" placeholder="Usuario" name="usuario">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" name="password">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+    </form>
+    {{#if error}}
+    <p>Usuario y/o contraseña incorrectos.</p>
+    {{/if}}
+  </div>
+</div>

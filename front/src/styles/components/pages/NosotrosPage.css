@@ -1,0 +1,64 @@
+.nosotros h2 {
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.nosotros p {
+    text-align: center;
+}
+
+.equipo h2 {
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 22%;
+    text-align: center;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #fff6df;
+    margin-bottom: 40px;
+}
+
+.persona img {
+
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 60%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.persona h3 {
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.persona h4 {
+    font-size: 14px;
+}
+
+.persona h3,
+.persona h4 {
+    margin: 0;
+}
+
+.persona p {
+    margin-top: 10px;
+    font-size: 12px;
+}

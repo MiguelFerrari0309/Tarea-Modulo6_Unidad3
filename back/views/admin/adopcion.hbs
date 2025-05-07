@@ -1,0 +1,51 @@
+<link rel='stylesheet' href='/stylesheets/adopcion.css' />
+
+<div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-8">
+            <p class="text-end">¡Bienvenido {{persona}} al apartado de Adopción!</p>
+        </div>
+        <div class="col-4 text-end">
+            <a class="btn btn-danger" href="/admin/login/logout">Cerrar sesion<i class="fas fa-sign-out-alt"></i></a>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 15px;">
+        <div class="col-7">
+            <h3>Listado de Adopciones</h3>
+        </div>
+        <div class="col-5 text-end">
+            <a class="btn btn-success" href="/admin/adopcion/agregar"><i class="fa fa-plus" aria-hidden="true"></i> Nuevo</a>
+        </div>
+    </div>
+ 
+    <div class="row" style="margin-top: 8px;">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Imagen</th>
+
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {{#each adopcion}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{nombre}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td class="text-end">
+                            <a class="btn btn-secondary" href="/admin/adopcion/modificar/{{id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="btn btn-secondary" href="/admin/adopcion/eliminar/{{id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

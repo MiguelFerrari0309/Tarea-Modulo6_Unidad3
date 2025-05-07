@@ -1,0 +1,29 @@
+.reqimg {
+    width: 30%;
+    height: auto;
+}
+
+.traje {
+    width: 100%;
+    height: auto;
+}
+
+.requisitos {
+    width: 70%;
+    padding-left: 15px;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.requisitos p {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #d19500;
+}

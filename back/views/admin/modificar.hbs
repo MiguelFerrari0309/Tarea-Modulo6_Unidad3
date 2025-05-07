@@ -1,0 +1,51 @@
+<link rel='stylesheet' href='/stylesheets/agregar.css' />
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="login-box">
+        <h2 class="login-title">Modificar la Adopción</h2>
+
+        <form action="/admin/adopcion/modificar" method="post" enctype="multipart/form-data">
+
+            <input type="hidden" value="{{adopcion.id}}" name="id">
+
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fa-solid fa-paw"></i></span>
+                    <input type="text" class="form-control" name="nombre" value="{{adopcion.nombre}}">
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-info-circle"></i></span>
+                    <textarea class="form-control" name="descripcion" id="descripcion"
+                        rows="8">{{adopcion.descripcion}}</textarea>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">IMAGEN</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-image"></i></span>
+                    <input type="file" class="form-control" id="imagen" name="img" />
+                </div>
+                <p>
+                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1">
+                    ¿Desea eliminar la imagen actual?</label>
+                    <input type="hidden" name="img_original" value="{{adopcion.img}}">
+                </p>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary w-100">Modificar</button>
+        </form>
+
+        <div class="error">
+            {{#if error}}
+            <p class="bi bi-x-circle" aria-hidden="true"> {{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
